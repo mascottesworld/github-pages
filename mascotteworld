@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MascottesWorld - Location de mascottes en Île-de-France</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(45deg, #7b2cbf, #4a4eff, #ff67a1);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #7b2cbf;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        .section {
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            margin: 20px auto;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container textarea, .form-container button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background: linear-gradient(45deg, #7b2cbf, #4a4eff);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-container button:hover {
+            background: linear-gradient(45deg, #4a4eff, #7b2cbf);
+        }
+        footer {
+            background: #7b2cbf;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .date-planner {
+            margin: 20px auto;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .date-planner h3 {
+            margin-bottom: 15px;
+        }
+        .date-planner select, .date-planner button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+        }
+        .date-planner button {
+            background: linear-gradient(45deg, #7b2cbf, #4a4eff);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .date-planner button:hover {
+            background: linear-gradient(45deg, #4a4eff, #7b2cbf);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MascottesWorld</h1>
+        <p>Service de location de mascottes en Île-de-France</p>
+    </header>
+
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#gallery">Nos mascottes</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>À propos</h2>
+        <p>Chez MascottesWorld, nous vous proposons un large choix de mascottes pour rendre vos événements inoubliables ! Que ce soit pour des anniversaires, mariages, fêtes scolaires ou autres, trouvez la mascotte parfaite pour divertir vos invités.</p>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Nos mascottes</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/150" alt="Mascotte Mickey">
+            <img src="https://via.placeholder.com/150" alt="Mascotte Minnie">
+            <img src="https://via.placeholder.com/150" alt="Mascotte Tigrou">
+            <img src="https://via.placeholder.com/150" alt="Mascotte Stitch">
+        </div>
+    </section>
+
+    <section id="reservation" class="section">
+        <h2>Planifiez votre réservation</h2>
+        <div class="date-planner">
+            <h3>Sélectionnez votre date et mascotte</h3>
+            <form action="#" method="POST">
+                <label for="mascotte">Choisissez une mascotte :</label>
+                <select id="mascotte" name="mascotte" required>
+                    <option value="mickey">Mickey</option>
+                    <option value="minnie">Minnie</option>
+                    <option value="tigrou">Tigrou</option>
+                    <option value="stitch">Stitch</option>
+                </select>
+
+                <label for="reservation-date">Date de réservation :</label>
+                <input type="date" id="reservation-date" name="reservation_date" required>
+
+                <button type="submit">Réserver maintenant</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contactez-nous</h2>
+        <div class="form-container">
+            <form action="#" method="POST">
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Date de l'événement :</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MascottesWorld - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
